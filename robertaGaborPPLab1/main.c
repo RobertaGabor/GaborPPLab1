@@ -28,6 +28,15 @@ int buscarAutoId(int id,eAuto autos[],int tamAu);
 void mostrarAuto(eAuto autos,eColor colores[],int tamCol,eMarca marcas[],int tamMar);
 int cargarDescripcionColor(char descripcion[],int id,eColor colores[],int tamCol);
 int cargarDescripcionMarca(char descripcion[],int id,eMarca marcas[],int tamMar);
+void bajaAuto(eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca marcas[],int tamMar);
+void mostrarAutos (eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca marcas[],int tamMar);
+void ordenarAutos (eAuto autos[],int tamAu,eMarca marcas[],int tamMar);
+int buscarPatenteAuto(char patente[],eAuto autos[],int tamAu);
+void mostrarServicio(eServicio servicios);
+void mostrarServicios (eServicio servicios[],int tamServ);
+int cargarDescripcionServicio(char descripcion[],int id,eServicio servicio[],int tamSer);
+int altaTrabajo (int id,eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca marcas[],int tamMar,eServicio servicio[],int tamServ,eTrabajo trabajo[], int tamTra);
+int buscarLibreTrabajo(eTrabajo trabajos[],int tamTra);
 
 int main()
 {
@@ -85,12 +94,11 @@ int main()
             }
             break;
         case 4:
-            if(flag=1)
+            if(flag==1)
             {
-                if(ordenarAutos(autos,TAMAUTOS,marcas,TAMSMARCAS))
-                {
+                    ordenarAutos(autos,TAMAUTOS,marcas,TAMSMARCAS);
                     mostrarAutos(autos,TAMAUTOS,colores,TAMCOLORES,marcas,TAMSMARCAS);
-                }
+
             }
             else
             {
@@ -534,6 +542,23 @@ void mostrarServicios (eServicio servicios[],int tamServ)
     }
 }
 
+void mostrarTrabajo(eTrabajo trabajo,eServicio servicios[],int tamServ)
+{
+    char descripcion[25];
+    cargarDescripcionServicio(descripcion,trabajo.idServicio,servicios,tamServ);
+    printf("\n%d    %10s    %d/%d/%d    %10s\n",trabajo.idTrabajo,trabajo.patente,trabajo.fecha,descripcion);
+}
+
+void mostrartrabajos (eTrabajo trabajos[],int tamTra,eServicio servicios[],int tamServ)
+{
+    printf("**********Listado de Trabajos*********\n");
+    printf(" ID        PATENTE    FECHA    SERVICIO\n");
+    for(int i=0;i<tamTra;i++)
+    {
+            mostrarTrabajo(trabajos[i],servicios,tamServ);
+    }
+}
+
 int cargarDescripcionServicio(char descripcion[],int id,eServicio servicio[],int tamSer)
 {
     int retorno=0;
@@ -550,7 +575,7 @@ int cargarDescripcionServicio(char descripcion[],int id,eServicio servicio[],int
     return retorno;
 }
 
-int altaTrabajo (int id,eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca marcas[],int tamMar,eServicio servivio,int tamServ,eTrabajo trabajo, int tamTra)
+int altaTrabajo (int id,eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca marcas[],int tamMar,eServicio servicio[],int tamServ,eTrabajo trabajo[], int tamTra)
 {
     int indice=buscarLibreTrabajo(trabajo,tamTra);
     int retorno=0;
@@ -571,7 +596,7 @@ int altaTrabajo (int id,eAuto autos[],int tamAu,eColor colores[],int tamCol,eMar
             {
                 if(buscarPatenteAuto(auxiliar.patente,autos,tamAu))
                 {
-                    mostrarServicios(servivio,tamServ);
+                    mostrarServicios(servicio,tamServ);
                     if(getInt(&auxiliar.idServicio,"Ingrese ID del servicio","Error debe ser de 20000 a 20003",20000,20003,1))
                     {
                         printf("Ingrese fecha de ingreso dd/mm/aaa: ");

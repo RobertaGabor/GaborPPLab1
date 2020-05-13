@@ -10,7 +10,7 @@ int anio;
 typedef struct{
 
 int idTrabajo;
-int patente;
+char patente[20];
 int idServicio;
 eFecha fecha;
 int isEmpty;
