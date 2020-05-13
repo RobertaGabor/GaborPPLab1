@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1589368146 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validaciones.h"
+
+1589368145 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\validaciones.h
+
