@@ -37,6 +37,8 @@ void mostrarServicios (eServicio servicios[],int tamServ);
 int cargarDescripcionServicio(char descripcion[],int id,eServicio servicio[],int tamSer);
 int altaTrabajo (int id,eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca marcas[],int tamMar,eServicio servicio[],int tamServ,eTrabajo trabajo[], int tamTra);
 int buscarLibreTrabajo(eTrabajo trabajos[],int tamTra);
+void mostrartrabajos (eTrabajo trabajos[],int tamTra,eServicio servicios[],int tamServ);
+void mostrarTrabajo(eTrabajo trabajo,eServicio servicios[],int tamServ);
 
 int main()
 {
@@ -130,7 +132,7 @@ int main()
         case 9:
             if(flag==2)
             {
-
+                mostrartrabajos(trabajos,TAMTRABAJOS,servicios,TAMSERVICIOS);
             }
             break;
         case 0:
