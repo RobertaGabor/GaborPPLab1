@@ -9,4 +9,8 @@ char descripcionMarca[20];
 
 }eMarca;
 
+int cargarDescripcionMarca(char descripcion[],int id,eMarca marcas[],int tamMar);
+void mostrarMarcas (eMarca marca[],int tamMar);
+void mostrarMarca(eMarca marcas);
+
 #endif // EMARCA_H_INCLUDED

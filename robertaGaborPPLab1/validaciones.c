@@ -1,8 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include "validaciones.h"
 
+
+int getPatente(char string[],int tam,char* mensaje,char* mensajeError,int reintentos)
+{
+    char auxiliarResultado[tam];
+    int validacion=0;
+
+    if(string!=NULL && mensaje!= NULL && mensajeError!= NULL &&reintentos>=0&&tam>0)
+    {
+        for(int i=0;i<=reintentos;reintentos--)
+        {
+            printf("\n%s",mensaje);
+            if(patenteValidated(auxiliarResultado,tam))
+            {
+                strcpy(string,auxiliarResultado);
+                validacion=1;
+                break;
+            }
+            else
+            {
+                printf("\n%s\n",mensajeError);
+            }
+        }
+    }
+
+    return validacion;
+}
 
 int getString(char string[],int tam,char* mensaje,char* mensajeError,int reintentos)
 {
@@ -29,9 +56,23 @@ int getString(char string[],int tam,char* mensaje,char* mensajeError,int reinten
 
     return validacion;
 }
+int patenteValidated(char cadena[],int tam)
+{
+    int retorno=0;
+    char bufferString[tam];
+    if(cadena!=NULL&&tam>0)
+    {
+        if(scanString(bufferString,tam)&&strlen(bufferString)>0)
+        {
+            retorno=1;
+            strncpy(cadena,bufferString,tam);
+        }
+    }
+    return retorno;
+}
 int scanString (char ingreso[],int tam)
 {
-    int retorno=-1;
+    int retorno=0;
     char auxiliar[4500];
 
     if(ingreso!=NULL&&tam>0)

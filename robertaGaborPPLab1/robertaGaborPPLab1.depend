@@ -1,9 +1,71 @@
 # depslib dependency file v1.0
-1589368146 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\validaciones.c
+1589832167 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"validaciones.h"
+
+1589830679 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\validaciones.h
+
+1589830317 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\ecolor.c
+	"eColor.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1589830319 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\ecolor.h
+
+1589830318 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\emarca.c
+	"eMarca.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1589830320 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\emarca.h
+
+1589833738 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eservicio.c
+	"eServicio.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1589830423 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eservicio.h
+
+1589834360 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eauto.c
+	"eAuto.h"
+	"eColor.h"
+	"eMarca.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"validaciones.h"
 
-1589368145 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\validaciones.h
+1589831355 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eauto.h
+	"eColor.h"
+	"eMarca.h"
+
+1589833109 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\etrabajo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validaciones.h"
+	"eAuto.h"
+	"eColor.h"
+	"eMarca.h"
+	"eServicio.h"
+	"eTrabajo.h"
+
+1589831254 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\etrabajo.h
+
+1589834360 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validaciones.h"
+	"eAuto.h"
+	"eColor.h"
+	"eMarca.h"
+	"eServicio.h"
+	"eTrabajo.h"
 

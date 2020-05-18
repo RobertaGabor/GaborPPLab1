@@ -10,4 +10,8 @@ float precio;
 
 }eServicio;
 
+void mostrarServicio(eServicio servicios);
+void mostrarServicios (eServicio servicios[],int tamServ);
+int cargarDescripcionServicio(char descripcion[],int id,eServicio servicio[],int tamSer);
+
 #endif // ESERVICIO_H_INCLUDED

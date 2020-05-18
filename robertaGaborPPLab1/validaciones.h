@@ -121,4 +121,23 @@ int validatedSexo (char* sexo);
 
 int validarSexo (char vector);
 
+/** \brief Valida que no haya desbordado el buffer la cadena
+ *
+ * \param cadena[] carray de caracteres
+ * \param tam int tamaño de array
+ * \return int devuelve 1 si se pudo sino 0
+ *
+ */
+int patenteValidated(char cadena[],int tam);
+/** \brief Pide una patente alfanumerica
+ *
+ * \param string[] char untero que devuelve la cadena
+ * \param tam int tamañod e la cadena
+ * \param mensaje char* mesaje que pide la patente
+ * \param mensajeError char* mensaje que avisa si hubo un error
+ * \param reintentos int reintentos
+ * \return int devuelve 1 si se pudo sino 0
+ *
+ */
+int getPatente(char string[],int tam,char* mensaje,char* mensajeError,int reintentos);
 #endif // VALIDACIONES_H_INCLUDED
