@@ -22,6 +22,7 @@ void mostrarTrabajo(eTrabajo trabajo,eServicio servicios[],int tamServ)
 
 void mostrartrabajos (eTrabajo trabajos[],int tamTra,eServicio servicios[],int tamServ)
 {
+    system("cls");
     printf("**********Listado de Trabajos*********\n");
     printf(" ID        PATENTE    FECHA      SERVICIO\n");
     for(int i=0;i<tamTra;i++)
@@ -42,21 +43,20 @@ int altaTrabajo (int id,eAuto autos[],int tamAu,eColor colores[],int tamCol,eMar
     eTrabajo auxiliar;
 
     system("cls");
-    printf("*****Alta de Trabajo*****\n");
+    printf("*****Alta de Trabajo*****\n\n\n");
     if(indice==-1)
     {
         printf("No hay lugar para agregar otro trabajo\n");
     }
     else
     {
-        printf("*******Autos disponible*********\n\n");
         mostrarAutos(autos,tamAu,colores,tamCol,marcas,tamMar);
             if(getPatente(auxiliar.patente,20,"\nIngrese patente del auto: ","Error ingrese una cadena valida",1))
             {
                 if(buscarPatenteAuto(auxiliar.patente,autos,tamAu)!=-1)
-                {
+                {   system("cls");
                     mostrarServicios(servicio,tamServ);
-                    if(getInt(&auxiliar.idServicio,"Ingrese ID del servicio","Error debe ser de 20000 a 20003",20000,20003,1))
+                    if(getInt(&auxiliar.idServicio,"Ingrese ID del servicio: ","Error debe ser de 20000 a 20003",20000,20003,1))
                     {
                         printf("Ingrese fecha de ingreso dd/mm/aaa: ");
                         scanf("%d/%d/%d",&auxiliar.fecha.dia,&auxiliar.fecha.mes,&auxiliar.fecha.anio);

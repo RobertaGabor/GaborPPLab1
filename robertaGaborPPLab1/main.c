@@ -94,7 +94,7 @@ int main()
             mostrarServicios(servicios,TAMSERVICIOS);
             break;
         case 8:
-            if(flag==1&&altaTrabajo(proximoIdTrabajo,autos,TAMAUTOS,colores,TAMCOLORES,marcas,TAMSMARCAS,servicios,TAMSERVICIOS,trabajos,TAMTRABAJOS))
+            if((flag==1||flag==2)&&altaTrabajo(proximoIdTrabajo,autos,TAMAUTOS,colores,TAMCOLORES,marcas,TAMSMARCAS,servicios,TAMSERVICIOS,trabajos,TAMTRABAJOS))
             {
                 printf("\n****Dado de alta exitosamente\n");
                 proximoIdTrabajo++;

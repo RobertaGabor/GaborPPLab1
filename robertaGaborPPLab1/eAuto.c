@@ -36,7 +36,7 @@ void ordenarAutos (eAuto autos[],int tamAu,eMarca marcas[],int tamMar)
         for(int j=i+1;j<tamAu;j++)
         {
             cargarDescripcionMarca(marcaJ,autos[j].idMarca,marcas,tamMar);
-            if(strcmp(marcaI,marcaJ)<0)
+            if(strcmp(marcaI,marcaJ)>0)
             {
                 auxiliar=autos[i];
                 autos[i]=autos[j];
@@ -44,7 +44,7 @@ void ordenarAutos (eAuto autos[],int tamAu,eMarca marcas[],int tamMar)
             }
             else
             {
-                 if((strcmp(marcaI,marcaJ)==0)&&(strcmp(autos[i].patente,autos[j].patente)<0))
+                 if((strcmp(marcaI,marcaJ)==0)&&(strcmp(autos[i].patente,autos[j].patente)>0))
                 {
                     auxiliar=autos[i];
                     autos[i]=autos[j];
@@ -115,7 +115,7 @@ void mostrarAuto(eAuto autos,eColor colores[],int tamCol,eMarca marcas[],int tam
     cargarDescripcionColor(color,autos.idColor,colores,tamCol);
     cargarDescripcionMarca(marca,autos.idMarca,marcas,tamMar);
 
-    printf("\n%d    %10s   %10s   %d   %10s\n\n",autos.idAuto,color,marca,autos.modelo,autos.patente);
+    printf("\n%2.d    %10s   %10s   %d   %10s\n\n",autos.idAuto,color,marca,autos.modelo,autos.patente);
 }
 
 int buscarAutoId(int id,eAuto autos[],int tamAu)

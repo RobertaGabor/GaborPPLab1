@@ -10,6 +10,7 @@ void mostrarMarca(eMarca marcas)
 }
 void mostrarMarcas (eMarca marca[],int tamMar)
 {
+    system("cls");
     printf("**********Listado de Marcas*********\n");
     printf(" ID         MARCA\n");
     for(int i=0;i<tamMar;i++)

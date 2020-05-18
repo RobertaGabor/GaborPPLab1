@@ -10,6 +10,7 @@ void mostrarServicio(eServicio servicios)
 
 void mostrarServicios (eServicio servicios[],int tamServ)
 {
+    system("cls");
     printf("**********Listado de Servicios*********\n");
     printf(" ID         SERVICIO   PRECIO\n");
     for(int i=0;i<tamServ;i++)
