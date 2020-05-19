@@ -32,7 +32,7 @@
 
 1589830423 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eservicio.h
 
-1589835662 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eauto.c
+1589848009 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eauto.c
 	"eAuto.h"
 	"eColor.h"
 	"eMarca.h"
@@ -45,7 +45,7 @@
 	"eColor.h"
 	"eMarca.h"
 
-1589835481 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\etrabajo.c
+1589848250 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\etrabajo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -58,7 +58,7 @@
 
 1589831254 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\etrabajo.h
 
-1589835481 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\main.c
+1589848302 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

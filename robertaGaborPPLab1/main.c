@@ -110,6 +110,10 @@ int main()
             {
                 mostrartrabajos(trabajos,TAMTRABAJOS,servicios,TAMSERVICIOS);
             }
+            else
+            {
+                printf("\n*****Primero debe dar de alta algun trabajo*****\n");
+            }
             break;
         case 0:
             seguir='n';

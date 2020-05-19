@@ -57,6 +57,7 @@ void ordenarAutos (eAuto autos[],int tamAu,eMarca marcas[],int tamMar)
 
 void mostrarAutos (eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca marcas[],int tamMar)
 {
+    system("cls");
     printf("**********Listado de Autos*********\n");
     printf("ID         COLOR      MARCA    MODELO     PATENTE\n");
     for(int i=0;i<tamAu;i++)
@@ -243,28 +244,31 @@ int altaAuto (eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca marcas[
     }
     else
     {
-            if(getInt(&auxiliar.idAuto,"Ingrese ID(de 0 a 10000): ","Error debe ser un entero numerico",0,10000,1)
-               &&getPatente(auxiliar.patente,20,"Ingrese patente: ","Error Ingrese cadena valida",1)
-               &&getInt(&auxiliar.modelo,"Ingrese anio de fabricacion: ","Error ingrese un anio valido",1000,2020,1))
+        if(getInt(&auxiliar.idAuto,"Ingrese ID(de 0 a 10000): ","Error debe ser un entero numerico",0,10000,1)&&buscarAutoId(auxiliar.idAuto,autos,tamAu)==-1)
+        {
+            if(getPatente(auxiliar.patente,20,"Ingrese patente: ","Error Ingrese cadena valida",1)
+            &&getInt(&auxiliar.modelo,"Ingrese anio de fabricacion: ","Error ingrese un anio valido",1000,2020,1))
             {
+                mostrarColores(colores,tamCol);
+                if(getInt(&auxiliar.idColor,"Ingrese color: ","Error debe ser un entero entre 5000 y 5004",5000,5004,1))
                 {
-                    mostrarColores(colores,tamCol);
-                    if(getInt(&auxiliar.idColor,"Ingrese color: ","Error debe ser un entero entre 5000 y 5004",5000,5004,1))
-                    {   mostrarMarcas(marcas,tamMar);
-                        if(getInt(&auxiliar.idMarca,"Ingrese marca: ","Error debe ser un entero entre 1000 y 1004",1000,1004,1))
-                        {
-                            auxiliar.isEmpty=0;
-                            autos[indice]=auxiliar;
-                            retorno=1;
-                        }
-
+                    mostrarMarcas(marcas,tamMar);
+                    if(getInt(&auxiliar.idMarca,"Ingrese marca: ","Error debe ser un entero entre 1000 y 1004",1000,1004,1))
+                    {
+                        auxiliar.isEmpty=0;
+                        autos[indice]=auxiliar;
+                        retorno=1;
                     }
+
                 }
             }
+        }
+        else
+        {
+            printf("\nEl ID ya existe o no cumple los requisitos de IDs\n");
+        }
     }
-    return retorno;
-
-
+return retorno;
 }
 
 void inicializarAutos(eAuto autos[],int tamAu)

@@ -17,14 +17,14 @@ void mostrarTrabajo(eTrabajo trabajo,eServicio servicios[],int tamServ)
 {
     char descripcion[25];
     cargarDescripcionServicio(descripcion,trabajo.idServicio,servicios,tamServ);
-    printf("\n%d    %10s    %d/%d/%d    %10s\n",trabajo.idTrabajo,trabajo.patente,trabajo.fecha,descripcion);
+    printf("\n%d    %10s    %2.d/%2.d/%d    %10s\n",trabajo.idTrabajo,trabajo.patente,trabajo.fecha.dia,trabajo.fecha.mes,trabajo.fecha.anio,descripcion);
 }
 
 void mostrartrabajos (eTrabajo trabajos[],int tamTra,eServicio servicios[],int tamServ)
 {
     system("cls");
     printf("**********Listado de Trabajos*********\n");
-    printf(" ID        PATENTE    FECHA      SERVICIO\n");
+    printf(" ID        PATENTE     FECHA        SERVICIO\n");
     for(int i=0;i<tamTra;i++)
     {
         if(trabajos[i].isEmpty==0)
@@ -58,22 +58,21 @@ int altaTrabajo (int id,eAuto autos[],int tamAu,eColor colores[],int tamCol,eMar
                     mostrarServicios(servicio,tamServ);
                     if(getInt(&auxiliar.idServicio,"Ingrese ID del servicio: ","Error debe ser de 20000 a 20003",20000,20003,1))
                     {
-                        printf("Ingrese fecha de ingreso dd/mm/aaa: ");
-                        scanf("%d/%d/%d",&auxiliar.fecha.dia,&auxiliar.fecha.mes,&auxiliar.fecha.anio);
-
-                        retorno=1;
-                        auxiliar.isEmpty=0;
-                        auxiliar.idTrabajo=id;
-                        trabajo[indice]=auxiliar;
-
+                        if(getInt(&auxiliar.fecha.dia,"Ingrese dia de ingreso: ","Error debe ingresar un dia del 1 al 31",1,31,1)
+                           &&getInt(&auxiliar.fecha.mes,"Ingrese mes de ingreso: ","Error debe ingreaar un numero del 1 al 12",1,12,1)
+                           &&getInt(&auxiliar.fecha.anio,"Ingrese anio de ingreso: ","Error ingrese un anio valido",1000,2020,1))
+                        {
+                            retorno=1;
+                            auxiliar.isEmpty=0;
+                            auxiliar.idTrabajo=id;
+                            trabajo[indice]=auxiliar;
+                        }
                     }
                 }
 
             }
     }
     return retorno;
-
-
 }
 
 
