@@ -57,7 +57,7 @@ int altaTrabajo (int id,eAuto autos[],int tamAu,eColor colores[],int tamCol,eMar
                 if(buscarPatenteAuto(auxiliar.patente,autos,tamAu)!=-1)
                 {   system("cls");
                     mostrarServicios(servicio,tamServ);
-                    if(getInt(&auxiliar.idServicio,"Ingrese ID del servicio: ","Error debe ser de 20000 a 20003",20000,20003,1))
+                    if(getInt(&auxiliar.idServicio,"Ingrese ID del servicio: ","Error debe ser un numero del 20000 al 20003",20000,20003,1))
                     {
                         if(getInt(&auxiliar.fecha.dia,"Ingrese dia de ingreso: ","Error debe ingresar un dia del 1 al 31",1,31,1)
                            &&getInt(&auxiliar.fecha.mes,"Ingrese mes de ingreso: ","Error debe ingreaar un numero del 1 al 12",1,12,1)
@@ -69,6 +69,10 @@ int altaTrabajo (int id,eAuto autos[],int tamAu,eColor colores[],int tamCol,eMar
                             trabajo[indice]=auxiliar;
                         }
                     }
+                }
+                else
+                {
+                    printf("\n*****La patente no se encuentra en el sistema*****\n");
                 }
 
             }
