@@ -59,7 +59,7 @@ void mostrarAutos (eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca ma
 {
     system("cls");
     printf("**********Listado de Autos*********\n");
-    printf("ID         COLOR       MARCA   MODELO    PATENTE\n");
+    printf(" ID         COLOR       MARCA   MODELO    PATENTE\n");
     for(int i=0;i<tamAu;i++)
     {
         if(autos[i].isEmpty==0)
@@ -212,6 +212,20 @@ int modificarDatosAuto(eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarc
     }
     return retorno;
 }
+int buscarUnaCarga(eAuto autos[],int tamAu)
+{
+    int encontrado=0;
+    for(int i=0;i<tamAu;i++)
+    {
+        if(autos[i].isEmpty==0)
+        {
+            encontrado=1;
+            break;
+        }
+    }
+
+    return encontrado;
+}
 
 int buscarLibre(eAuto autos[],int tamAu)
 {
@@ -251,10 +265,10 @@ int altaAuto (eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca marcas[
                 if(getInt(&auxiliar.modelo,"Ingrese anio de fabricacion: ","Error ingrese un anio valido",1000,2020,1))
                 {
                     mostrarColores(colores,tamCol);
-                    if(getInt(&auxiliar.idColor,"Ingrese color: ","Error debe ser un entero entre 5000 y 5004",5000,5004,1))
+                    if(getInt(&auxiliar.idColor,"Ingrese ID color: ","Error debe ser un entero entre 5000 y 5004",5000,5004,1))
                     {
                         mostrarMarcas(marcas,tamMar);
-                        if(getInt(&auxiliar.idMarca,"Ingrese marca: ","Error debe ser un entero entre 1000 y 1004",1000,1004,1))
+                        if(getInt(&auxiliar.idMarca,"Ingrese ID marca: ","Error debe ser un entero entre 1000 y 1004",1000,1004,1))
                         {
                             auxiliar.isEmpty=0;
                             autos[indice]=auxiliar;

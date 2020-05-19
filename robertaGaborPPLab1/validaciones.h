@@ -131,8 +131,8 @@ int validarSexo (char vector);
 int patenteValidated(char cadena[],int tam);
 /** \brief Pide una patente alfanumerica
  *
- * \param string[] char untero que devuelve la cadena
- * \param tam int tamañod e la cadena
+ * \param string[] char puntero que devuelve la cadena
+ * \param tam int tamaño de la cadena
  * \param mensaje char* mesaje que pide la patente
  * \param mensajeError char* mensaje que avisa si hubo un error
  * \param reintentos int reintentos

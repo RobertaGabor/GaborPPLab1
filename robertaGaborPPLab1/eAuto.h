@@ -14,21 +14,21 @@ int isEmpty;
 
 }eAuto;
 
-/** \brief Carga un array de tipo estructura auto en un indice
+/** \brief Carga un vector de tipo estructura eAuto en un indice
 *
-* \param vector de autos
+* \param vector de tipo eAuto
 * \param tamaño vector de autos
-* \param vector de colores con estructura color
+* \param vector de tipo eColor
 * \param tamaño vector de colores
-* \param vector de marcas con estructura marcas
+* \param vector de tipo eMarcas
 * \param tamaño vector de marcas
 * \return 1 si se pudo dar de alta sino 0
  *
  */
 int altaAuto (eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca marcas[],int tamMar);
-/** \brief Se elige si modificar color o modelo de un indice del vector de autos (de un auto)
+/** \brief Se elige si modificar color o modelo en un indice del vector de tipo eAuto (de un auto en particular)
  *
- * \param autos[] eAuto vector que se carga
+ * \param autos[] eAuto vector que se modifica
  * \param tamAu int tamaño del vector autos
  * \param colores[] eColor vector de colores
  * \param tamCol int tamaño vector de colores
@@ -41,31 +41,31 @@ int modificarDatosAuto(eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarc
 /** \brief Busca el ID de auto en un vector y si lo encuentra devuelve el indice
  *
  * \param id int Id buscado
- * \param autos[] eAuto vector de autos a analizar
+ * \param autos[] eAuto vector de autos a recorrer en la celda ID
  * \param tamAu int tamaño de vector autos
  * \return int devuelve -1 si no lo encontro sino devuelve el indice
  *
  */
 int buscarAutoId(int id,eAuto autos[],int tamAu);
-/** \brief muestra los datos dde un solo auto(1 indice del vector)
+/** \brief muestra los datos de un indice unicamente de un vector de tipo eAuto
  *
  * \param autos eAuto variable de tipo eAuto
- * \param colores[] eColor vector de colores tipo eColor
- * \param tamCol int tamaño de vector colores
- * \param marcas[] eMarca vector de marcas de tipo eMarcas
+ * \param colores[] eColor vector de colores
+ * \param tamCol int tamaño del vector colores
+ * \param marcas[] eMarca vector de marcas
  * \param tamMar int tamaño de vector marcas
  * \return void
  *
  */
 void mostrarAuto(eAuto autos,eColor colores[],int tamCol,eMarca marcas[],int tamMar);
-/** \brief Baja logica de un auto, pide patente y si la encuentra convierte el isEmpty en 1
+/** \brief Baja logica de un auto, pide patente y si la encuentra convierte la celda isEmpty en 1
  *
  * \param autos[] eAuto vector autos
- * \param tamAu int tamañod e vector autos
- * \param colores[] eColor vector de color
- * \param tamCol int tamaño de vector color
- * \param marcas[] eMarca vector marca
- * \param tamMar int taaño vector marca
+ * \param tamAu int tamaño de vector autos
+ * \param colores[] eColor vector de colores
+ * \param tamCol int tamaño de vector colores
+ * \param marcas[] eMarca vector marcas
+ * \param tamMar int taaño vector marcas
  * \return void
  *
  */
@@ -77,7 +77,7 @@ void bajaAuto(eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca marcas[
  * \param vector tipo eColor de colores
  * \param tamaño de vector colores
  * \param vector tipo eMarca de marcas
- * \param tamaño vector marcas
+ * \param tamaño de vector marcas
  * \return void
  *
  */
@@ -88,7 +88,7 @@ void mostrarAutos (eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca ma
  * \param tamaño de vector autos
  * \param vector de marcas tipo estructura eMarcas
  * \param tamaño de vector marcas
- * \return
+ * \return void
  *
  */
 void ordenarAutos (eAuto autos[],int tamAu,eMarca marcas[],int tamMar);
@@ -99,10 +99,10 @@ void ordenarAutos (eAuto autos[],int tamAu,eMarca marcas[],int tamMar);
  *
  */
 int menuDeCambiosAuto(void);
-/** \brief pide una patente y bsuca si se encuentra, si la encuentra devuelve el indice
+/** \brief pide una patente, busca si se encuentra en el vector de tipo eAuto, si la encuentra devuelve el indice
  *
- * \param patente[] char patente buscada
- * \param autos[] eAuto vector tipo struct eAuto a analizar
+ * \param patente[] char cadena patente buscada
+ * \param autos[] eAuto vector tipo eAuto a analizar
  * \param tamAu int tamaño de vector auto
  * \return int devuelve -1 si no lo encontro sino el indice
  *
@@ -118,11 +118,18 @@ int buscarPatenteAuto(char patente[],eAuto autos[],int tamAu);
 int buscarLibre(eAuto autos[],int tamAu);
 /** \brief inicializa un array de tipo eAuto en la celda isEmpty en 1
  *
- * \param autos[] eAuto array a inicializar
- * \param tamAu int tamaño del array
+ * \param autos[] eAuto vector a inicializar
+ * \param tamAu int tamaño del vector
  * \return void
  *
  */
 void inicializarAutos(eAuto autos[],int tamAu);
-
+/** \brief Busca que en el vector de tipo eAuto haya almenos uno cargado
+ *
+ * \param autos[] eAuto vector de autos
+ * \param tamAu int tamaño de vector de autos
+ * \return int devuelve 1 si encontro al menos uno sino 0
+ *
+ */
+int buscarUnaCarga(eAuto autos[],int tamAu);
 #endif // EAUTO_H_INCLUDED

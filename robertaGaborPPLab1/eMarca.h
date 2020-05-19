@@ -19,7 +19,7 @@ char descripcionMarca[20];
  *
  */
 int cargarDescripcionMarca(char descripcion[],int id,eMarca marcas[],int tamMar);
-/** \brief Muestra todas las marcas con sus descripciones y el emcabezado de informacion
+/** \brief Muestra todas las marcas con sus descripciones y el encabezado de informacion
  *
  * \param vector de tipo eMarca a recorrer
  * \param tamaño del vector marcas

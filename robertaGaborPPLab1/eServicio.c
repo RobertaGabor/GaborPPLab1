@@ -5,7 +5,7 @@
 
 void mostrarServicio(eServicio servicios)
 {
-    printf("\n%d    %10s     %2.f\n",servicios.idServicio,servicios.descripcionServicio,servicios.precio);
+    printf("\n%d    %10s     $%2.f\n",servicios.idServicio,servicios.descripcionServicio,servicios.precio);
 }
 
 void mostrarServicios (eServicio servicios[],int tamServ)

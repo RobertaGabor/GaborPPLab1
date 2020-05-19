@@ -6,7 +6,7 @@
 	<ctype.h>
 	"validaciones.h"
 
-1589913097 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\validaciones.h
+1589915942 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\validaciones.h
 
 1589913097 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\ecolor.c
 	"eColor.h"
@@ -14,7 +14,7 @@
 	<stdlib.h>
 	<string.h>
 
-1589914916 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\ecolor.h
+1589915942 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\ecolor.h
 
 1589913097 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\emarca.c
 	"eMarca.h"
@@ -22,7 +22,7 @@
 	<stdlib.h>
 	<string.h>
 
-1589914793 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\emarca.h
+1589915942 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\emarca.h
 
 1589913097 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eservicio.c
 	"eServicio.h"
@@ -32,7 +32,7 @@
 
 1589915035 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eservicio.h
 
-1589913097 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eauto.c
+1589916922 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eauto.c
 	"eAuto.h"
 	"eColor.h"
 	"eMarca.h"
@@ -41,7 +41,7 @@
 	<string.h>
 	"validaciones.h"
 
-1589914542 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eauto.h
+1589917009 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eauto.h
 	"eColor.h"
 	"eMarca.h"
 
@@ -56,9 +56,9 @@
 	"eServicio.h"
 	"eTrabajo.h"
 
-1589914542 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\etrabajo.h
+1589915809 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\etrabajo.h
 
-1589913097 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\main.c
+1589917838 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

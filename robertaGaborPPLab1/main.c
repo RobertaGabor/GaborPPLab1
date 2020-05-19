@@ -28,6 +28,7 @@ int main()
     int opcionMenuMain;
     int proximoIdTrabajo=10;
     int flag=0;
+    int flagb=0;
 
     inicializarAutos(autos,TAMAUTOS);
     inicializarTrabajos(trabajos,TAMTRABAJOS);
@@ -65,6 +66,10 @@ int main()
             if(flag==1)
             {
                bajaAuto(autos,TAMAUTOS,colores,TAMCOLORES,marcas,TAMSMARCAS);
+               if(!buscarUnaCarga(autos,TAMAUTOS))
+               {
+                   flag=0;
+               }
             }
             else
             {
@@ -94,11 +99,11 @@ int main()
             mostrarServicios(servicios,TAMSERVICIOS);
             break;
         case 8:
-            if((flag==1||flag==2)&&altaTrabajo(proximoIdTrabajo,autos,TAMAUTOS,colores,TAMCOLORES,marcas,TAMSMARCAS,servicios,TAMSERVICIOS,trabajos,TAMTRABAJOS))
+            if((flag==1)&&altaTrabajo(proximoIdTrabajo,autos,TAMAUTOS,colores,TAMCOLORES,marcas,TAMSMARCAS,servicios,TAMSERVICIOS,trabajos,TAMTRABAJOS))
             {
                 printf("\n****Dado de alta exitosamente\n");
                 proximoIdTrabajo++;
-                flag=2;
+                flagb=1;
             }
             else
             {
@@ -106,13 +111,13 @@ int main()
             }
             break;
         case 9:
-            if(flag==2)
+            if(flagb==1)
             {
                 mostrartrabajos(trabajos,TAMTRABAJOS,servicios,TAMSERVICIOS);
             }
             else
             {
-                printf("\n*****Primero debe dar de alta algun trabajo*****\n");
+                printf("\n*****No hay trabajos que listar*****\n");
             }
             break;
         case 0:

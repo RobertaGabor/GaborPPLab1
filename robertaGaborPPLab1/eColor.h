@@ -15,7 +15,7 @@ char descripcionColor[20];
  *
  */
 void mostrarColor(eColor colores);
-/** \brief Muestra todos los colores con sus descripciones y el emcabezado de informacion
+/** \brief Muestra todos los colores con sus descripciones y el encabezado de informacion
  *
  * \param vector de tipo eColor a recorrer
  * \param tamaño del vector colores
@@ -27,7 +27,7 @@ void mostrarColores (eColor color[],int tamCol);
  *
  * \param descripcion[] char puntero que guarda la descripcion correspondiente
  * \param id int Id del color buscado
- * \param colores[] eMColor vector de tipo eColor para buscar la coincidencia
+ * \param colores[] eColor vector de tipo eColor para buscar la coincidencia
  * \param tamMar int tamaño del vector de colores
  * \return int devuelve 1 si lo encontro sino 0
  *
