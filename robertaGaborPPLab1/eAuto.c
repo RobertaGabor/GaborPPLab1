@@ -59,7 +59,7 @@ void mostrarAutos (eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca ma
 {
     system("cls");
     printf("**********Listado de Autos*********\n");
-    printf("ID         COLOR      MARCA    MODELO     PATENTE\n");
+    printf("ID         COLOR       MARCA   MODELO    PATENTE\n");
     for(int i=0;i<tamAu;i++)
     {
         if(autos[i].isEmpty==0)
@@ -84,7 +84,7 @@ void bajaAuto(eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca marcas[
         indiceID=buscarPatenteAuto(patente,autos,tamAu);
         if(indiceID==-1)
         {
-            printf("No se encontro la patente o esta dado de baja\n");
+            printf("\n*****No se encontro la patente o esta dado de baja*****\n");
         }
         else
         {
@@ -102,7 +102,7 @@ void bajaAuto(eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca marcas[
             }
             else
             {
-                printf("\nOperacion cancelada\n");
+                printf("\n*****Operacion cancelada*****\n");
             }
         }
     }
@@ -246,22 +246,29 @@ int altaAuto (eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca marcas[
     {
         if(getInt(&auxiliar.idAuto,"Ingrese ID(de 0 a 10000): ","Error debe ser un entero numerico",0,10000,1)&&buscarAutoId(auxiliar.idAuto,autos,tamAu)==-1)
         {
-            if(getPatente(auxiliar.patente,20,"Ingrese patente: ","Error Ingrese cadena valida",1)
-            &&getInt(&auxiliar.modelo,"Ingrese anio de fabricacion: ","Error ingrese un anio valido",1000,2020,1))
+            if(getPatente(auxiliar.patente,20,"Ingrese patente: ","Error Ingrese cadena valida",1)&&buscarPatenteAuto(auxiliar.patente,autos,tamAu)==-1)
             {
-                mostrarColores(colores,tamCol);
-                if(getInt(&auxiliar.idColor,"Ingrese color: ","Error debe ser un entero entre 5000 y 5004",5000,5004,1))
+                if(getInt(&auxiliar.modelo,"Ingrese anio de fabricacion: ","Error ingrese un anio valido",1000,2020,1))
                 {
-                    mostrarMarcas(marcas,tamMar);
-                    if(getInt(&auxiliar.idMarca,"Ingrese marca: ","Error debe ser un entero entre 1000 y 1004",1000,1004,1))
+                    mostrarColores(colores,tamCol);
+                    if(getInt(&auxiliar.idColor,"Ingrese color: ","Error debe ser un entero entre 5000 y 5004",5000,5004,1))
                     {
-                        auxiliar.isEmpty=0;
-                        autos[indice]=auxiliar;
-                        retorno=1;
-                    }
+                        mostrarMarcas(marcas,tamMar);
+                        if(getInt(&auxiliar.idMarca,"Ingrese marca: ","Error debe ser un entero entre 1000 y 1004",1000,1004,1))
+                        {
+                            auxiliar.isEmpty=0;
+                            autos[indice]=auxiliar;
+                            retorno=1;
+                        }
 
+                    }
                 }
             }
+            else
+            {
+                printf("\nLa patente ya existe\n");
+            }
+
         }
         else
         {

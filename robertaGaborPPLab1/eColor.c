@@ -13,7 +13,7 @@ void mostrarColores (eColor color[],int tamCol)
 {
     system("cls");
     printf("**********Listado de Colores*********\n");
-    printf(" ID         COLOR\n");
+    printf(" ID          COLOR\n");
     for(int i=0;i<tamCol;i++)
     {
             mostrarColor(color[i]);

@@ -56,7 +56,7 @@ int main()
             }
             else
             {
-                printf("Primero ingrese al menos un auto\n");
+                printf("\n*****Primero ingrese al menos un auto*****\n");
             }
 
 
@@ -68,7 +68,7 @@ int main()
             }
             else
             {
-                printf("Primero ingrese al menos un auto\n");
+                printf("\n*****Primero ingrese al menos un auto*****\n");;
             }
             break;
         case 4:
@@ -80,7 +80,7 @@ int main()
             }
             else
             {
-                printf("Primero ingrese al menos un auto\n");
+                printf("\n*****Primero ingrese al menos un auto*****\n");
             }
 
             break;
@@ -119,7 +119,7 @@ int main()
             seguir='n';
             break;
         default:
-            printf("Opcion invalida\n");
+            printf("\n*****Opcion invalida*****\n");
             break;
         }
 

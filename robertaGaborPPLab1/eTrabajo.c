@@ -23,7 +23,7 @@ void mostrarTrabajo(eTrabajo trabajo,eServicio servicios[],int tamServ)
 void mostrartrabajos (eTrabajo trabajos[],int tamTra,eServicio servicios[],int tamServ)
 {
     system("cls");
-    printf("**********Listado de Trabajos*********\n");
+    printf("**********Listado de Trabajos*********\n\n");
     printf(" ID        PATENTE     FECHA        SERVICIO\n");
     for(int i=0;i<tamTra;i++)
     {
@@ -33,6 +33,7 @@ void mostrartrabajos (eTrabajo trabajos[],int tamTra,eServicio servicios[],int t
         }
 
     }
+    printf("\n");
 }
 
 int altaTrabajo (int id,eAuto autos[],int tamAu,eColor colores[],int tamCol,eMarca marcas[],int tamMar,eServicio servicio[],int tamServ,eTrabajo trabajo[], int tamTra)
