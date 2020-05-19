@@ -116,7 +116,7 @@ void mostrarAuto(eAuto autos,eColor colores[],int tamCol,eMarca marcas[],int tam
     cargarDescripcionColor(color,autos.idColor,colores,tamCol);
     cargarDescripcionMarca(marca,autos.idMarca,marcas,tamMar);
 
-    printf("\n%2.d    %10s   %10s   %d   %10s\n\n",autos.idAuto,color,marca,autos.modelo,autos.patente);
+    printf("\n%2.d    %10s   %10s    %d  %10s\n\n",autos.idAuto,color,marca,autos.modelo,autos.patente);
 }
 
 int buscarAutoId(int id,eAuto autos[],int tamAu)

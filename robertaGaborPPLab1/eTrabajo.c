@@ -24,7 +24,7 @@ void mostrartrabajos (eTrabajo trabajos[],int tamTra,eServicio servicios[],int t
 {
     system("cls");
     printf("**********Listado de Trabajos*********\n\n");
-    printf(" ID        PATENTE     FECHA        SERVICIO\n");
+    printf("ID         PATENTE     FECHA        SERVICIO\n");
     for(int i=0;i<tamTra;i++)
     {
         if(trabajos[i].isEmpty==0)
