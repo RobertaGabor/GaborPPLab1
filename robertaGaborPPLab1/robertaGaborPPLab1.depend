@@ -1,38 +1,38 @@
 # depslib dependency file v1.0
-1589832167 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\validaciones.c
+1589913097 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\validaciones.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
 	"validaciones.h"
 
-1589830679 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\validaciones.h
+1589913097 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\validaciones.h
 
-1589848657 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\ecolor.c
+1589913097 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\ecolor.c
 	"eColor.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1589830319 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\ecolor.h
+1589914916 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\ecolor.h
 
-1589835695 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\emarca.c
+1589913097 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\emarca.c
 	"eMarca.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1589830320 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\emarca.h
+1589914793 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\emarca.h
 
-1589835551 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eservicio.c
+1589913097 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eservicio.c
 	"eServicio.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1589830423 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eservicio.h
+1589915035 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eservicio.h
 
-1589849502 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eauto.c
+1589913097 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eauto.c
 	"eAuto.h"
 	"eColor.h"
 	"eMarca.h"
@@ -41,11 +41,11 @@
 	<string.h>
 	"validaciones.h"
 
-1589857307 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eauto.h
+1589914542 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\eauto.h
 	"eColor.h"
 	"eMarca.h"
 
-1589849982 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\etrabajo.c
+1589913097 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\etrabajo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -56,9 +56,9 @@
 	"eServicio.h"
 	"eTrabajo.h"
 
-1589831254 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\etrabajo.h
+1589914542 c:\ejercicios en c\gaborpplab1\robertagaborpplab1\etrabajo.h
 
-1589848627 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\main.c
+1589913097 source:c:\ejercicios en c\gaborpplab1\robertagaborpplab1\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

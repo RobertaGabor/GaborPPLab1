@@ -14,7 +14,7 @@ int isEmpty;
 
 }eAuto;
 
-/** \brief Carga un array de tipo estructura auto
+/** \brief Carga un array de tipo estructura auto en un indice
 *
 * \param vector de autos
 * \param tamaño vector de autos
